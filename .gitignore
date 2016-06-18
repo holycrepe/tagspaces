@@ -346,3 +346,9 @@ data/locales/zh_HK/
 data/node-webkit/node_modules/trash/node_modules/fs-extra/
 data/testfiles
 rundevfirefox
+
+desktop.ini
+.idea
+data/libs/
+data/node_modules/
+*.log
