@@ -4,6 +4,8 @@
     "animate.css": "~3.4.0",
     "bootstrap": "~3.3.6",
     "bootswatch": "~3.3.6",
+    "seiyria-bootstrap-slider": "~7.1.1",
+    "bootstrap-toggle": "~2.2.2",
     "bootstrap-validator": "~0.9.0",
     "d3": "~3.3.13",
     "dompurify": "~0.7.1",
