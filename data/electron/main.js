@@ -9,9 +9,13 @@ var debugMode;
 var startupFilePath;
 
 //handling start parameter
-//console.log(JSON.stringify(process.argv));
+console.log("Main Process Arguments: " +JSON.stringify(process.argv));
 process.argv.forEach(function(arg, count) {
-  if (arg.toLowerCase() === '-d' || arg.toLowerCase() === '--debug') {
+  var argTest = arg.toString().toLowerCase();
+  if (argTest.startsWith("--remote-debugging-port=") || arg.toLowerCase().startsWith('--debug=') || arg.toLowerCase().startsWith('--debug_brk=')) {
+    app.commandLine.appendArgument(arg);
+  }
+  else if (arg.toLowerCase() === '-d' || arg.toLowerCase() === '--debug') {
     debugMode = true;
   } else if (arg.toLowerCase() === '-p' || arg.toLowerCase() === '--portable') {
     app.setPath('userData', 'tsprofile'); // making the app portable
