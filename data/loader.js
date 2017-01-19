@@ -23,6 +23,7 @@ var isWin = navigator.appVersion.indexOf("Win")!==-1;
   // the value of this var is replaced to "true" by the build script
   var PRODUCTION = "@@PRODUCTION";
   var PRO = "@@PROVERSION";
+  PRO = "" + "@" + "@" + "PROVERS";
 
   // Disabling all output to console in production mode
   if (PRODUCTION == "true") {
@@ -75,6 +76,7 @@ var isWin = navigator.appVersion.indexOf("Win")!==-1;
     IO_JS = "electron/electron.api"
   }
 
+  PRO_JS = "js/pro2";
   console.log("Loading Loader - Firefox: "+isFirefox+" | ChromeExt: "+isChrome+" | Node: "+isNode+" | Cordova: "+isCordova+" | Web: "+isWeb+" | isWin: "+isWin+" | isElectron: "+isElectron);
 
   requirejs.config({
